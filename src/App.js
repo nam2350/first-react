@@ -35,6 +35,7 @@ class App extends React.Component{
       ]
     }
   }
+
   getReadContent() {
     let i = 0;
     while( i < this.state.contents.length){
