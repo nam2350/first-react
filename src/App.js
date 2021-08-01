@@ -6,7 +6,6 @@ import ReadContent from "./component/ReadContent";
 import Control from "./component/Control";
 import CreateContent from "./component/CreateContent";
 import UpdateContent from "./component/UpdateContent";
-import Dog from "./component/Dog";
 
 class App extends React.Component {
   constructor(props) {
@@ -102,6 +101,13 @@ class App extends React.Component {
     return _article;
   }
 
+
+  goToDogPage = () => {
+    console.log(this.props.history)
+    this.props.history.push('./dogpage');
+  }
+
+
   goToFox = () => {
     this.props.history.push("./fox");
     console.log(this.props.history);
@@ -147,8 +153,13 @@ class App extends React.Component {
               this.setState({ mode: mode });
             }
           }.bind(this)}
-        />
-        {this.getContent()}
+      />
+      {this.getContent()}
+      <div>
+      <button onClick={this.goToDogPage}>Dog Random Image</button>
+      </div>
+    
+
         <div>
           <button
             style={{ outline: " 0", backgroundColor: "transparent" }}
@@ -158,6 +169,7 @@ class App extends React.Component {
           </button>
         </div>
       </div>
+
     );
   }
 }
