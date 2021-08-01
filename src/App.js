@@ -129,7 +129,9 @@ class App extends React.Component{
         }
       }.bind(this)}/>
       {this.getContent()}
-      <Dog/>
+      <div>
+      <button>Dog Random Image</button>
+      </div>
     </div>
     );
   }
