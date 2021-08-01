@@ -92,6 +92,11 @@ class App extends React.Component{
     return _article
   }
 
+  goToDogPage = () => {
+    console.log(this.props.history)
+    this.props.history.push('./dogpage');
+  }
+
  
   render() {
   console.log("새로운 매인!!!", this.state.contents)  
@@ -130,7 +135,7 @@ class App extends React.Component{
       }.bind(this)}/>
       {this.getContent()}
       <div>
-      <button>Dog Random Image</button>
+      <button onClick={this.goToDogPage}>Dog Random Image</button>
       </div>
     </div>
     );
