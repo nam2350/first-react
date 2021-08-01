@@ -6,6 +6,7 @@ import ReadContent from './component/ReadContent'
 import Control from './component/Control'
 import CreateContent from './component/CreateContent'
 import UpdateContent from './component/UpdateContent'
+import Dog from './component/Dog'
 
 class App extends React.Component{
   constructor(props){
@@ -128,6 +129,7 @@ class App extends React.Component{
         }
       }.bind(this)}/>
       {this.getContent()}
+      <Dog/>
     </div>
     );
   }
